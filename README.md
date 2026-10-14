@@ -8,9 +8,9 @@ near-black Noir. Both share vermilion signals, cobalt symbols and cinema amber.
 
 **Free · MIT licensed · Native themes and SVG file icons · No runtime dependencies**
 
-The intended first public release is **0.3.1**, under Marketplace publisher
-**zmmartins**. Source: [GitHub repository](https://github.com/zmmartins/obsidian-celluloid-vscode).
-This repository preparation does not publish the extension.
+**Latest release:** [v0.3.1](https://github.com/zmmartins/obsidian-celluloid-vscode/releases/tag/v0.3.1)  
+**Publisher:** zmmartins  
+**Install:** [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=zmmartins.obsidian-celluloid)
 
 ## Light
 
@@ -31,7 +31,14 @@ isolated Extension Development Host; no custom UI or design mockup is overlaid.
 
 ## Install and select
 
-After publication, search **Obsidian Celluloid** in VS Code's Extensions view.
+Install **Obsidian Celluloid** directly from the
+[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=zmmartins.obsidian-celluloid),
+or search for **Obsidian Celluloid** in VS Code's Extensions view.
+
+> **Recommended font:** JetBrains Mono (optional).
+> See [Optional typography](#optional-typography) to reproduce the
+> intended appearance. The extension does not install fonts automatically.
+
 For a downloaded release package, run **Extensions: Install from VSIX…** and
 choose `obsidian-celluloid-0.3.1.vsix`.
 
