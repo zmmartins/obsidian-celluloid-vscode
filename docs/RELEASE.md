@@ -1,28 +1,15 @@
-# First public release: 0.3.0
+# First public release: 0.3.1
 
-The public version is deliberately 0.3.0, including the icon refinements from the
-local 0.3.1 iteration. Both color themes, all icon mappings, syntax rules, palettes
-and presets are preserved exactly during release preparation. No GitHub release
-or Marketplace publication has been performed.
+Current identity: `zmmartins.obsidian-celluloid@0.3.1`.
+Repository: https://github.com/zmmartins/obsidian-celluloid-vscode.
+The manifest contains the registered publisher, repository, homepage and issues URL.
+`private: true` prevents accidental npm publishing; it does not make this GitHub
+repository or Marketplace extension private. No publication is performed by these scripts.
 
-## Configuration still needed
-
-Choose and register your real Marketplace publisher ID. Create or identify the
-actual public GitHub repository. The draft manifest intentionally omits
-`publisher`, `repository`, `homepage` and `bugs` rather than committing invented
-identities or placeholder URLs. `private: true` prevents accidental npm publishing;
-it does not make the GitHub repository or Marketplace extension private.
-
-Once those values are known, configure them locally:
-
-```sh
-npm run release:configure -- "$PUBLISHER_ID" "$GITHUB_REPOSITORY_URL"
-```
-
-Set the two environment variables to the real values first. The repository URL
-must be the HTTPS GitHub repository URL, without credentials or a query. This
-command changes metadata only, retaining version 0.3.0. It does not create a
-repository, upload files, contact Marketplace, or authenticate a publisher.
+Both color themes, all icon mappings, syntax rules, palettes and presets remain
+unchanged. Historical v0.2/v0.3.0 baseline versions describe approved appearance
+snapshots. Release version, archive filename and installed identifier are derived
+from the current `package.json`; baselines never override release metadata.
 
 ## Validate and package
 
@@ -31,11 +18,12 @@ Use Node 22+ (24 used for validation), then:
 ```sh
 npm ci
 npm test
-npm run test:host
-npm run release:audit
 npm run package
+npm run test
+npm run test
 npm run test:package
 npm run test:install
+npm run release:audit
 ```
 
 `npm run package` requires the real publisher and repository metadata. It uses the
@@ -45,20 +33,19 @@ links; optionally set `OBSIDIAN_GITHUB_BRANCH` to an existing branch or release 
 before packaging for pinned links. Do not use an unpublished tag until the images
 are available at that ref. Packaging never publishes.
 
-Output: `dist/obsidian-celluloid-0.3.0.vsix`. Confirm the public repository serves
+Output: `dist/obsidian-celluloid-0.3.1.vsix`. Confirm the public repository serves
 the logo and both screenshot PNGs over HTTPS before Marketplace upload. Local
-archive checks cannot certify live image hosting for an unknown repository.
+archive checks cannot certify live image hosting without checking the live repository.
 
-Before the identity is configured, the independent offline packaging check is:
+An independent local review packaging check is also available:
 
 ```sh
 npm run package:check
-node scripts/check-package.mjs dist/release-review/obsidian-celluloid-0.3.0-review.vsix
+node scripts/check-package.mjs dist/release-review/obsidian-celluloid-0.3.1-review.vsix
 ```
 
-The installed VSCE explicitly supports publisher-free local test packaging.
 This produces a clearly marked **review artifact**, with local image links and
-no finalized publisher. It must not be uploaded as the Marketplace release.
+the current manifest metadata. It must not be uploaded as the Marketplace release.
 The normal release packaging command does not use the review exceptions.
 
 ## GitHub preparation
@@ -71,9 +58,9 @@ pushing, especially if files were already tracked before ignore rules existed.
 
 This task has not initialized a repository, added a remote, pushed a branch,
 created a tag or created a GitHub release. Use your actual repository and preferred
-Git workflow when ready. Keep the complete MIT attribution. Publisher account
-verification, extension-name availability and final public release authorization
-remain owner steps.
+Git workflow when ready. Keep the complete MIT attribution. Publisher authentication,
+Marketplace name/version availability and final public release authorization remain
+owner steps. The publisher ID itself is configured.
 
 ## Audit evidence
 
@@ -94,3 +81,14 @@ Keep publishing credentials outside the repository.
 See [official manifest metadata](https://code.visualstudio.com/api/references/extension-manifest)
 and [Marketplace publishing guidance](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
 for publisher registration and authentication when you decide to publish.
+
+## Stale artifact diagnosis
+
+The previous `dist/obsidian-celluloid-0.3.1.vsix` was an obsolete local icon-pass
+archive: it named publisher `josemariapereira` and lacked the new public docs and
+Marketplace PNG. The current `.vscodeignore` includes `docs/FILE-ICONS.md`,
+`docs/ASSET-PROVENANCE.md` and `docs/RELEASE.md` correctly. Rebuild before validating.
+Archive and install checks now compare publisher/name/version and release metadata
+against the current manifest before checking contents or installing. A wrong
+publisher or stale version produces an explicit rebuild error. Required docs,
+logo, screenshots, native theme/icon assets, and private/build exclusions stay strict.

@@ -8,8 +8,9 @@ near-black Noir. Both share vermilion signals, cobalt symbols and cinema amber.
 
 **Free · MIT licensed · Native themes and SVG file icons · No runtime dependencies**
 
-The first public release is being prepared as **0.3.0**, including the complete
-icon refinements from the local 0.3.1 iteration. Nothing has been published yet.
+The intended first public release is **0.3.1**, under Marketplace publisher
+**zmmartins**. Source: [GitHub repository](https://github.com/zmmartins/obsidian-celluloid-vscode).
+This repository preparation does not publish the extension.
 
 ## Light
 
@@ -32,7 +33,7 @@ isolated Extension Development Host; no custom UI or design mockup is overlaid.
 
 After publication, search **Obsidian Celluloid** in VS Code's Extensions view.
 For a downloaded release package, run **Extensions: Install from VSIX…** and
-choose `obsidian-celluloid-0.3.0.vsix`.
+choose `obsidian-celluloid-0.3.1.vsix`.
 
 1. Run **Preferences: Color Theme** and select **Obsidian Celluloid (Light)** or
    **Obsidian Celluloid Noir**. On macOS, use **⌘K, ⌘T** to open the picker.
@@ -41,7 +42,7 @@ choose `obsidian-celluloid-0.3.0.vsix`.
 The CLI alternative for a configured release package is:
 
 ```sh
-code --install-extension obsidian-celluloid-0.3.0.vsix
+code --install-extension obsidian-celluloid-0.3.1.vsix
 ```
 
 VS Code 1.95 or newer is required. Selecting a theme does not change fonts,

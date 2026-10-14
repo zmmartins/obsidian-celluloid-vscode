@@ -2,7 +2,7 @@
   "name": "obsidian-celluloid",
   "displayName": "Obsidian Celluloid",
   "description": "Cinematic Light and Noir themes with precise syntax colors and original adaptive file icons.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "engines": {
     "vscode": "^1.95.0"
@@ -72,5 +72,14 @@
   },
   "private": true,
   "icon": "assets/marketplace-icon.png",
-  "pricing": "Free"
+  "pricing": "Free",
+  "publisher": "zmmartins",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmmartins/obsidian-celluloid-vscode.git"
+  },
+  "homepage": "https://github.com/zmmartins/obsidian-celluloid-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/zmmartins/obsidian-celluloid-vscode/issues"
+  }
 }

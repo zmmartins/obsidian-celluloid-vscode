@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import { readJSON, contrast, validateTheme, validateContrast, validateIndicators, validateIcons, validateIconContrast } from '../scripts/lib/validation.mjs';
 import { validateLightPreservation } from '../scripts/lib/preservation.mjs';
 import { defaultIconKeys, mappingIconKeys } from '../scripts/lib/icons.mjs';
+import { releaseIdentity } from '../scripts/lib/release-identity.mjs';
 
 const manifest = readJSON('package.json');
 const noir = readJSON('themes/obsidian-celluloid-noir-color-theme.json');
@@ -16,7 +17,7 @@ test('approved Light artifacts and unrelated icon associations remain unchanged'
   assert.equal(validateLightPreservation(), 34);
 });
 test('two independent native themes coexist under the original extension identity', () => {
-  assert.equal(manifest.version, '0.3.0');
+  releaseIdentity(manifest);
   assert.deepEqual(manifest.contributes.themes.map(({ label, uiTheme }) => ({ label, uiTheme })), [
     { label: 'Obsidian Celluloid (Light)', uiTheme: 'vs' },
     { label: 'Obsidian Celluloid Noir', uiTheme: 'vs-dark' }

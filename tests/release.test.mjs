@@ -5,15 +5,34 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readJSON } from '../scripts/lib/validation.mjs';
 import { validateReleaseAppearance, validateReleaseAssets, validateMarkdownLinks, scanReleaseText } from '../scripts/lib/release-validation.mjs';
+import { releaseIdentity, validatePackageIdentity } from '../scripts/lib/release-identity.mjs';
 
 test('release preparation preserves every current theme, icon, palette and preset byte', () => {
   assert.equal(validateReleaseAppearance(), 95);
   const manifest = readJSON('package.json');
-  assert.equal(manifest.version, '0.3.0');
+  const identity = releaseIdentity(manifest);
+  const lock = readJSON('package-lock.json');
+  assert.equal(lock.version, identity.version, 'Lockfile tracks the current release version');
+  assert.equal(lock.packages[''].version, identity.version);
+  assert.equal(lock.name, identity.name);
   assert.equal(manifest.pricing, 'Free');
   assert.equal(manifest.icon, 'assets/marketplace-icon.png');
   assert.equal(manifest.displayName, 'Obsidian Celluloid');
   assert.deepEqual(manifest.categories, ['Themes']);
+});
+test('current manifest identity rejects stale publisher, version and name in an archive', () => {
+  const manifest = readJSON('package.json');
+  const identity = validatePackageIdentity(structuredClone(manifest), manifest);
+  assert.equal(identity.extensionId, `${manifest.publisher}.${manifest.name}`);
+  assert.equal(identity.versionedId, `${manifest.publisher}.${manifest.name}@${manifest.version}`);
+  for (const [key, value] of [
+    ['publisher', 'josemariapereira'],
+    ['version', manifest.version === '0.3.0' ? '0.3.1' : '0.3.0'],
+    ['name', `${manifest.name}-stale`]
+  ]) {
+    assert.notEqual(value, manifest[key]);
+    assert.throws(() => validatePackageIdentity({ ...manifest, [key]: value }, manifest), /Stale or incorrect VSIX/);
+  }
 });
 test('real public PNG assets and all local documentation references resolve', () => {
   validateReleaseAssets();

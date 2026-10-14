@@ -5,14 +5,17 @@ import { spawnSync } from 'node:child_process';
 import { readJSON, validateIcons } from './lib/validation.mjs';
 import { validateIconCoverage } from './lib/icon-coverage.mjs';
 import { validateReleaseAppearance, validateReleaseAssets, validateMarkdownLinks, scanReleaseText } from './lib/release-validation.mjs';
+import { releaseIdentity, validatePackageIdentity } from './lib/release-identity.mjs';
 const manifest = readJSON('package.json');
-const vsix = path.resolve(process.argv[2] || (manifest.publisher ? `dist/obsidian-celluloid-${manifest.version}.vsix` : `dist/release-review/obsidian-celluloid-${manifest.version}-review.vsix`));
+const identity = releaseIdentity(manifest, { requirePublisher: manifest.publisher !== undefined });
+const vsix = path.resolve(process.argv[2] || (manifest.publisher ? `dist/${identity.artifactName}` : `dist/release-review/${identity.reviewArtifactName}`));
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'obsidian-vsix-check-'));
 try {
   const result = spawnSync('unzip', ['-q', vsix, '-d', temp], { encoding: 'utf8' });
   if (result.status) throw new Error(result.stderr || 'unzip failed');
   const base = path.join(temp, 'extension');
   const packaged = readJSON(path.join(base, 'package.json'));
+  validatePackageIdentity(packaged, manifest);
   for (const item of [...packaged.contributes.themes, ...packaged.contributes.iconThemes]) {
     if (!fs.existsSync(path.join(base, item.path))) throw new Error(`Packaged contribution missing: ${item.path}`);
   }
@@ -39,5 +42,5 @@ try {
   walk('');
   scanReleaseText(base, files);
   if (fs.existsSync(path.join(base, 'assets/marketplace-icon.svg'))) throw new Error('Editable branding source should remain in GitHub, outside the VSIX');
-  console.log('VSIX archive: all contributions, icons, presets and docs present; development dependencies and references excluded.');
+  console.log(`VSIX archive identity ${identity.versionedId || identity.artifactName} verified; themes, icons, logo, screenshots, presets and public docs present; development/private files excluded.`);
 } finally { fs.rmSync(temp, { recursive: true, force: true }); }
