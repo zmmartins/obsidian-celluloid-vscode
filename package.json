@@ -1,0 +1,76 @@
+{
+  "name": "obsidian-celluloid",
+  "displayName": "Obsidian Celluloid",
+  "description": "Cinematic Light and Noir themes with precise syntax colors and original adaptive file icons.",
+  "version": "0.3.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "light theme",
+    "dark theme",
+    "noir",
+    "file icons",
+    "minimal",
+    "cinematic",
+    "obsidian celluloid",
+    "syntax highlighting"
+  ],
+  "galleryBanner": {
+    "color": "#121216",
+    "theme": "dark"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Obsidian Celluloid (Light)",
+        "uiTheme": "vs",
+        "path": "./themes/obsidian-celluloid-light-color-theme.json"
+      },
+      {
+        "label": "Obsidian Celluloid Noir",
+        "uiTheme": "vs-dark",
+        "path": "./themes/obsidian-celluloid-noir-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "obsidian-celluloid-icons",
+        "label": "Obsidian Celluloid Icons",
+        "path": "./icons/obsidian-celluloid-icon-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run build && npm run validate && node --test tests/*.test.mjs",
+    "vscode:prepublish": "npm test",
+    "package": "node scripts/package.mjs",
+    "test:package": "node scripts/check-package.mjs",
+    "test:host": "node scripts/test-host.mjs",
+    "test:install": "node scripts/test-install.mjs",
+    "package:check": "node scripts/package.mjs --check",
+    "release:audit": "node scripts/release-audit.mjs",
+    "release:configure": "node scripts/configure-release.mjs",
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.0.0",
+    "ajv": "^8.20.0",
+    "fast-xml-parser": "^5.11.2",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  },
+  "private": true,
+  "icon": "assets/marketplace-icon.png",
+  "pricing": "Free"
+}

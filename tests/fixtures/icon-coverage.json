@@ -1,0 +1,164 @@
+{
+  "pdf": [
+    "brief.pdf"
+  ],
+  "office": [
+    "script.doc",
+    "script.docx",
+    "script.rtf"
+  ],
+  "presentation": [
+    "pitch.ppt",
+    "pitch.pptx"
+  ],
+  "spreadsheet": [
+    "budget.xls",
+    "budget.xlsx"
+  ],
+  "document": [
+    "notes.txt"
+  ],
+  "markdown": [
+    "notes.md"
+  ],
+  "json": [
+    "data.json",
+    "data.jsonc"
+  ],
+  "structured-data": [
+    "config.yaml",
+    "config.yml",
+    "config.toml"
+  ],
+  "xml": [
+    "feed.xml"
+  ],
+  "data": [
+    "metrics.csv",
+    "metrics.tsv"
+  ],
+  "config": [
+    "config.ini",
+    "local.env",
+    ".env",
+    ".env.local",
+    ".editorconfig"
+  ],
+  "javascript": [
+    "scene.js"
+  ],
+  "react": [
+    "scene.jsx",
+    "scene.tsx"
+  ],
+  "typescript": [
+    "scene.ts"
+  ],
+  "html": [
+    "index.html"
+  ],
+  "css": [
+    "scene.css",
+    "scene.scss",
+    "scene.sass",
+    "scene.less"
+  ],
+  "python": [
+    "scene.py"
+  ],
+  "code": [
+    "main.java",
+    "main.c",
+    "main.cpp",
+    "main.cs",
+    "main.php",
+    "main.rb",
+    "main.go",
+    "main.rs",
+    "main.kt",
+    "main.swift"
+  ],
+  "shell": [
+    "run.sh",
+    "run.bash",
+    "run.zsh"
+  ],
+  "docker": [
+    "Dockerfile",
+    "Containerfile",
+    "scene.dockerfile"
+  ],
+  "build": [
+    "Makefile",
+    "GNUmakefile",
+    "Gradle",
+    "build.gradle",
+    "settings.gradle",
+    "build.gradle.kts",
+    "settings.gradle.kts",
+    "gradlew",
+    "gradlew.bat",
+    "pom.xml"
+  ],
+  "package": [
+    "package.json"
+  ],
+  "lock": [
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "package-lock.json",
+    "deps.lock"
+  ],
+  "git": [
+    ".gitignore",
+    ".gitattributes"
+  ],
+  "archive": [
+    "bundle.zip",
+    "bundle.rar",
+    "bundle.7z",
+    "bundle.tar",
+    "bundle.gz",
+    "bundle.tgz",
+    "bundle.tar.gz"
+  ],
+  "image": [
+    "frame.png",
+    "frame.jpg",
+    "frame.jpeg",
+    "frame.webp",
+    "frame.svg",
+    "frame.gif"
+  ],
+  "audio": [
+    "score.mp3",
+    "score.wav"
+  ],
+  "film": [
+    "scene.mp4",
+    "scene.mov"
+  ],
+  "design": [
+    "layout.fig",
+    "layout.sketch",
+    "layout.xd",
+    "layout.ai",
+    "layout.psd"
+  ],
+  "notebook": [
+    "study.ipynb"
+  ],
+  "database": [
+    "query.sql"
+  ],
+  "log": [
+    "studio.log"
+  ],
+  "security": [
+    "studio.pem",
+    "studio.crt"
+  ],
+  "key": [
+    "studio.key"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "fileExtensions": {
+    "pdf": "pdf",
+    "sql": "database",
+    "yaml": "structured-data",
+    "yml": "structured-data",
+    "toml": "structured-data"
+  },
+  "fileNames": {
+    "dockerfile": "docker",
+    "makefile": "build"
+  },
+  "languageIds": {
+    "yaml": "structured-data",
+    "dockerfile": "docker"
+  }
+}

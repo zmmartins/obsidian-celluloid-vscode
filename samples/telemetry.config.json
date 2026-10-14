@@ -1,0 +1,10 @@
+{
+  "name": "Obsidian Celluloid",
+  "fps": 24.0,
+  "shutterAngle": 180,
+  "active": true,
+  "archived": false,
+  "missingFrame": null,
+  "stocks": ["kodak-5219-vision3", "double-x"],
+  "lens": { "focalLengthMm": 35, "apertureStop": 1.4 }
+}

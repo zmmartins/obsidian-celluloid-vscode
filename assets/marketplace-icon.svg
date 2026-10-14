@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Obsidian Celluloid</title>
+  <rect x="8" y="8" width="240" height="240" rx="40" fill="#121216"/>
+  <circle cx="128" cy="76" r="13" fill="#FF3B30"/>
+  <ellipse cx="106" cy="148" rx="15" ry="20" fill="none" stroke="#F4F4F6" stroke-width="7"/>
+  <path d="M163 135 C159 130 155 128 150 128 C140 128 134 136 134 148 C134 160 140 168 150 168 C155 168 159 166 163 161" fill="none" stroke="#F4F4F6" stroke-width="7" stroke-linecap="round"/>
+</svg>

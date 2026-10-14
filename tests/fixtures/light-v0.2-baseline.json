@@ -1,0 +1,297 @@
+{
+  "version": "0.2.0",
+  "sha256": {
+    "themes/obsidian-celluloid-light-color-theme.json": "14b6b642f5bebf2b6fee762cba2350cf7d06baeec5937b0f3ec2b233d5335c62",
+    "design/tokens.json": "f94b816093056cbe5c9cb881c7e764b40d42f5bb357b9e69a78b376b6403bc40",
+    "design/reference-palette.json": "0a69ca52f738074142b322eb628cfe5e6fb4686a0febc43171fa5b75845b89d2",
+    "presets/obsidian-celluloid.settings.json": "c857e5b8505369229cee4295013395acdc1596e20baf17b77db8d27745c0e67f",
+    "docs/DESIGN-TOKENS.md": "b5fccfc4d7f6eddea1f32c68199b4ffed9a9fbfea4693059852827050d52e449",
+    "docs/VISUAL-FIDELITY-v0.2.md": "1fd166921d80f735236bc6c3b523e0c91738b10e885fdbb8adc96f327a3a9523",
+    "icons/svg/code.svg": "843e785adff9d7256ff56b71c6ef495c0a03b26c8f3285723dd120530dd2fce3",
+    "icons/svg/config.svg": "e2e538bad0cfd0ca292d310ecd08480022c3deccefbca2269ceace253f059ead",
+    "icons/svg/css.svg": "a78edc89eefefe50507a004fe62ffdfceeec033ef88f9b291094a0cf4ac1c738",
+    "icons/svg/document.svg": "bef75a03f5aae0dcc6451361f06377d54b1fd81dbbb0593bfdf33d54f241bb60",
+    "icons/svg/file.svg": "b5f8deecb21abae4eefc404828d6709e6390070ca98d559a6a2ed601ebadc2da",
+    "icons/svg/film.svg": "e32c6d867241dd67d8fee8cd32f72428d3b999e75264f26842897396b6f2fdb6",
+    "icons/svg/folder-config-open.svg": "8015f8a7b1b67e5990e5dd7e9ecb7af7eb523d7535f2f16d4755aac04152f3c7",
+    "icons/svg/folder-config.svg": "bb7e29036cbb6d86d05e5d7fc520e674b3e04fcfd2d8b5c1c77e775708540565",
+    "icons/svg/folder-open.svg": "fa4a12fcf8c7f77973f04fc8b0e13419a647a74b0e49647f0e8c2780622e62a6",
+    "icons/svg/folder-src-open.svg": "5f99571e7aebb39f3cd18f387750ced8a3b87d2fb316735b189520b09f662987",
+    "icons/svg/folder-src.svg": "2b97cbd04487932ed79115170ec99233688eede2ab4dd9f98894b9ae88780902",
+    "icons/svg/folder-test-open.svg": "468ad5baacf2a22c6b4b853634782a93a36411848242228df55307f45386ac5f",
+    "icons/svg/folder-test.svg": "034ba49e531cce9f9db28a04ef2cbba392ee01b1b6881aa6dc0989f7ac37cefc",
+    "icons/svg/folder.svg": "d895d3ab74832339f265b67ac63a52e3a3a8f4c5c336aea63c3f224e4188f4be",
+    "icons/svg/git.svg": "4c880084927e2b53efd04e1311938302a507c402fa166c69ef978bf102262021",
+    "icons/svg/html.svg": "ae9ccf432f2e5a818e1c4ddb263fb2f5604d3d6abeb69f0cd8ab562cea8b9ed3",
+    "icons/svg/image.svg": "31346378059e29e3175cf393266bceb8a52d2b180731eb6da18b5b85a900591c",
+    "icons/svg/javascript.svg": "a89c25c1b8a41fbee1f1b7b890d3fa0e122e5b59d4bc43ca0d09062bbc9f1ee2",
+    "icons/svg/json.svg": "fd6cf2d2490e6ea32823e14bf35bbb6b48853208a8b5bd38a328ad2965268cd0",
+    "icons/svg/lock.svg": "539bd7fb57a93a963363a3da53cbf5fd8727c4588fd92f49dc3988709eba26e8",
+    "icons/svg/markdown.svg": "d48d89b862744a39946e59df3ebd8d605bc934a59a6813e1e047640f1f00b784",
+    "icons/svg/package.svg": "478fe6f2e59d312c3b3c41871d3cefb8b7a2bac81262b6a365a49da723b2edec",
+    "icons/svg/python.svg": "cfbf491ad8c9f8bc243772edac5572bfe9d8304e52000ce3c976c3378eee0435",
+    "icons/svg/react.svg": "4b0f7e16c95cf7424e66e15d94c0180e524d856fcd1b8bf9f6f6b6a874e3e300",
+    "icons/svg/shader.svg": "e828586effb3bbc918dab730ce4fb26bf0cb82dfafa40c5aad58a4d3c76a3dd7",
+    "icons/svg/shell.svg": "a51fb0a47a88d5feafcb2fee284663580f81f2810f0b30eafd5f24f3edb62708",
+    "icons/svg/test.svg": "789e10d080d6f23f2c3d6d645f05afc6cd7e9840424e2ecdbac79f2a627a5c68",
+    "icons/svg/typescript.svg": "3c035459fe382579a7cd769d16d2ed0dc4aba58f179ccb281dfff6b2674447c8"
+  },
+  "themeContribution": {
+    "label": "Obsidian Celluloid (Light)",
+    "uiTheme": "vs",
+    "path": "./themes/obsidian-celluloid-light-color-theme.json"
+  },
+  "iconContribution": {
+    "id": "obsidian-celluloid-icons",
+    "label": "Obsidian Celluloid Icons",
+    "path": "./icons/obsidian-celluloid-icon-theme.json"
+  },
+  "icons": {
+    "$schema": "vscode://schemas/icon-theme",
+    "iconDefinitions": {
+      "file": {
+        "iconPath": "./svg/file.svg"
+      },
+      "folder": {
+        "iconPath": "./svg/folder.svg"
+      },
+      "folder-open": {
+        "iconPath": "./svg/folder-open.svg"
+      },
+      "folder-src": {
+        "iconPath": "./svg/folder-src.svg"
+      },
+      "folder-src-open": {
+        "iconPath": "./svg/folder-src-open.svg"
+      },
+      "folder-config": {
+        "iconPath": "./svg/folder-config.svg"
+      },
+      "folder-config-open": {
+        "iconPath": "./svg/folder-config-open.svg"
+      },
+      "folder-test": {
+        "iconPath": "./svg/folder-test.svg"
+      },
+      "folder-test-open": {
+        "iconPath": "./svg/folder-test-open.svg"
+      },
+      "typescript": {
+        "iconPath": "./svg/typescript.svg"
+      },
+      "javascript": {
+        "iconPath": "./svg/javascript.svg"
+      },
+      "react": {
+        "iconPath": "./svg/react.svg"
+      },
+      "python": {
+        "iconPath": "./svg/python.svg"
+      },
+      "json": {
+        "iconPath": "./svg/json.svg"
+      },
+      "html": {
+        "iconPath": "./svg/html.svg"
+      },
+      "css": {
+        "iconPath": "./svg/css.svg"
+      },
+      "markdown": {
+        "iconPath": "./svg/markdown.svg"
+      },
+      "shell": {
+        "iconPath": "./svg/shell.svg"
+      },
+      "config": {
+        "iconPath": "./svg/config.svg"
+      },
+      "git": {
+        "iconPath": "./svg/git.svg"
+      },
+      "package": {
+        "iconPath": "./svg/package.svg"
+      },
+      "lock": {
+        "iconPath": "./svg/lock.svg"
+      },
+      "test": {
+        "iconPath": "./svg/test.svg"
+      },
+      "image": {
+        "iconPath": "./svg/image.svg"
+      },
+      "shader": {
+        "iconPath": "./svg/shader.svg"
+      },
+      "document": {
+        "iconPath": "./svg/document.svg"
+      },
+      "film": {
+        "iconPath": "./svg/film.svg"
+      },
+      "code": {
+        "iconPath": "./svg/code.svg"
+      }
+    },
+    "file": "file",
+    "folder": "folder",
+    "folderExpanded": "folder-open",
+    "rootFolder": "folder",
+    "rootFolderExpanded": "folder-open",
+    "hidesExplorerArrows": false,
+    "showLanguageModeIcons": false,
+    "fileExtensions": {
+      "ts": "typescript",
+      "mts": "typescript",
+      "cts": "typescript",
+      "js": "javascript",
+      "mjs": "javascript",
+      "cjs": "javascript",
+      "tsx": "react",
+      "jsx": "react",
+      "py": "python",
+      "pyi": "python",
+      "pyw": "python",
+      "json": "json",
+      "jsonc": "json",
+      "json5": "json",
+      "html": "html",
+      "htm": "html",
+      "vue": "html",
+      "svelte": "html",
+      "css": "css",
+      "scss": "css",
+      "sass": "css",
+      "less": "css",
+      "md": "markdown",
+      "markdown": "markdown",
+      "mdx": "markdown",
+      "sh": "shell",
+      "bash": "shell",
+      "zsh": "shell",
+      "fish": "shell",
+      "ps1": "shell",
+      "yaml": "config",
+      "yml": "config",
+      "toml": "config",
+      "ini": "config",
+      "conf": "config",
+      "cfg": "config",
+      "env": "config",
+      "editorconfig": "config",
+      "go": "code",
+      "rs": "code",
+      "c": "code",
+      "h": "code",
+      "cpp": "code",
+      "hpp": "code",
+      "cs": "code",
+      "java": "code",
+      "kt": "code",
+      "swift": "code",
+      "rb": "code",
+      "php": "code",
+      "lua": "code",
+      "sql": "code",
+      "glsl": "shader",
+      "vert": "shader",
+      "frag": "shader",
+      "wgsl": "shader",
+      "png": "image",
+      "jpg": "image",
+      "jpeg": "image",
+      "webp": "image",
+      "gif": "image",
+      "svg": "image",
+      "ico": "image",
+      "avif": "image",
+      "txt": "document",
+      "pdf": "document",
+      "rst": "document",
+      "film": "film",
+      "edl": "film",
+      "mov": "film",
+      "mp4": "film",
+      "webm": "film",
+      "lock": "lock",
+      "test.ts": "test",
+      "test.tsx": "test",
+      "spec.ts": "test",
+      "spec.tsx": "test",
+      "test.js": "test",
+      "test.jsx": "test",
+      "spec.js": "test",
+      "spec.jsx": "test"
+    },
+    "fileNames": {
+      "package.json": "package",
+      "package-lock.json": "lock",
+      "yarn.lock": "lock",
+      "pnpm-lock.yaml": "lock",
+      ".gitignore": "git",
+      ".gitattributes": "git",
+      ".gitmodules": "git",
+      ".env": "config",
+      ".env.local": "config",
+      ".editorconfig": "config",
+      "dockerfile": "config",
+      "makefile": "config",
+      "license": "document",
+      "readme.md": "markdown",
+      "tsconfig.json": "config",
+      "eslint.config.js": "config",
+      "vitest.config.ts": "test"
+    },
+    "folderNames": {
+      "src": "folder-src",
+      "lib": "folder-src",
+      "components": "folder-src",
+      "scripts": "folder-src",
+      "tests": "folder-test",
+      "test": "folder-test",
+      "__tests__": "folder-test",
+      ".vscode": "folder-config",
+      ".github": "folder-config",
+      "config": "folder-config"
+    },
+    "folderNamesExpanded": {
+      "src": "folder-src-open",
+      "lib": "folder-src-open",
+      "components": "folder-src-open",
+      "scripts": "folder-src-open",
+      "tests": "folder-test-open",
+      "test": "folder-test-open",
+      "__tests__": "folder-test-open",
+      ".vscode": "folder-config-open",
+      ".github": "folder-config-open",
+      "config": "folder-config-open"
+    },
+    "languageIds": {
+      "typescript": "typescript",
+      "typescriptreact": "react",
+      "javascript": "javascript",
+      "javascriptreact": "react",
+      "python": "python",
+      "json": "json",
+      "jsonc": "json",
+      "html": "html",
+      "css": "css",
+      "scss": "css",
+      "less": "css",
+      "markdown": "markdown",
+      "shellscript": "shell",
+      "powershell": "shell",
+      "yaml": "config",
+      "dockerfile": "config",
+      "go": "code",
+      "rust": "code",
+      "c": "code",
+      "cpp": "code",
+      "java": "code",
+      "csharp": "code",
+      "ruby": "code",
+      "php": "code"
+    }
+  }
+}
